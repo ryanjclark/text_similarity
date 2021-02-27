@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "text_similarity"
+version = "0.1.0"
+description = ""
+authors = ["ryanjclark <ryanjclark91@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.25.1"
+fastapi = "^0.63.0"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.8.4"
+black = "^20.8b1"
+mypy = "^0.812"
+bandit = "^1.7.0"
+pylint = "^2.7.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
