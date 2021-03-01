@@ -1,4 +1,11 @@
-from src.score.levenshtein import levenshtein 
+from src.model.string_pair import StringPair
 
-print(levenshtein("ryan", "brian"))
 
+def main():
+    example_pair = StringPair("brian", "ryan")
+    score = example_pair.get_similarity()
+    print(score)
+
+
+if __name__ == "__main__":
+    main()
