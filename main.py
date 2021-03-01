@@ -1,11 +1,11 @@
-from src.model.string_pair import StringPair
+from fastapi import FastAPI
+
+from src.routers import similarity
+
+app = FastAPI()
+app.include_router(similarity.router)
 
 
-def main():
-    example_pair = StringPair("brian", "ryan")
-    score = example_pair.get_similarity()
-    print(score)
-
-
-if __name__ == "__main__":
-    main()
+@app.get("/")
+async def root():
+    return {"message": "hit this with POST at /text-similarity"}
