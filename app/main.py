@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from src.routers import similarity
+from app.routers import similarity
 
 app = FastAPI()
 app.include_router(similarity.router)
