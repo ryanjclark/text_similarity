@@ -1,9 +1,8 @@
-from src.score.levenshtein import levenshtein
-from src.score.normalize import normalize
+from src.model.string_pair import StringPair
 
 def main():
-    distance = levenshtein("bria", "brian")
-    score = normalize("bria", "brian", distance)
+    example_pair = StringPair("brian", "ryan")
+    score = example_pair.get_similarity()
     print(score)
 
 if __name__ == "__main__":

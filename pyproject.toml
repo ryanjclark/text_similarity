@@ -8,6 +8,7 @@ authors = ["ryanjclark <ryanjclark91@gmail.com>"]
 python = "^3.9"
 requests = "^2.25.1"
 fastapi = "^0.63.0"
+dataclasses-json = "^0.5.2"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8.4"
