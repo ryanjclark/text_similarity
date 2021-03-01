@@ -1,9 +1,9 @@
 import os
 
 import pytest
-from src.models.similarity_score import SimilarityScore
-from src.models.string_pair import StringPair
-from src.services.levenshtein_service import LevenshteinService
+from app.models.similarity_score import SimilarityScore
+from app.models.string_pair import StringPair
+from app.services.levenshtein_service import LevenshteinService
 
 samples = []
 files = [os.path.join("samples", f) for f in os.listdir("samples")]
