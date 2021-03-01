@@ -5,6 +5,7 @@ from dataclasses_json import dataclass_json
 
 from src.utils.matrix import create_matrix
 
+
 @dataclass_json
 @dataclass
 class StringPair:
@@ -37,7 +38,10 @@ class StringPair:
                     matrix[i][j] = matrix[i - 1][j - 1]
                 # else assign the minimum of the 3 surrounding neighbors plus 1
                 else:
-                    matrix[i][j] = min(matrix[i - 1][j - 1], matrix[i][j - 1], matrix[i - 1][j]) + 1
+                    matrix[i][j] = (
+                        min(matrix[i - 1][j - 1], matrix[i][j - 1], matrix[i - 1][j])
+                        + 1
+                    )
 
         # return the bottom corner of the matrix
         self.distance = matrix[-1][-1]
@@ -46,10 +50,9 @@ class StringPair:
         """Normalizes the Levenshtein score and returns
         the complement of the normalized ratio."""
         max_distance = max(len(self.doc_1), len(self.doc_2))
-        self.score = 1 - (self.distance / max_distance)
+        self.score = round(1 - (self.distance / max_distance), 4)
 
     def get_similarity(self) -> int:
         self._levenshtein()
         self._normalize()
         return self.score
-
