@@ -8,7 +8,7 @@ authors = ["ryanjclark <ryanjclark91@gmail.com>"]
 python = "^3.9"
 requests = "^2.25.1"
 fastapi = "^0.63.0"
-dataclasses-json = "^0.5.2"
+uvicorn = "^0.13.4"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8.4"
@@ -17,6 +17,7 @@ mypy = "^0.812"
 bandit = "^1.7.0"
 pylint = "^2.7.1"
 pytest = "^6.2.2"
+python-language-server = "^0.36.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
