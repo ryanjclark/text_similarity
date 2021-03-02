@@ -8,11 +8,11 @@
 View the docs at `http://localhost:8000/docs`  
   
 ```
-curl -X \  
-    POST \  
-    "http://localhost:8000/api/v1/text-similarity" \  
-    -H  "accept: application/json" \  
-    -H  "Content-Type: application/json" \  
+curl -X \
+    POST \
+    "http://localhost:8000/api/v1/text-similarity" \
+    -H  "accept: application/json" \
+    -H  "Content-Type: application/json" \
     -d "{\"doc_1\":\"firstString\",\"doc_2\":\"secondString\"}"
 ```
 
