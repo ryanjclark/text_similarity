@@ -1,6 +1,6 @@
 from ..models.similarity_score import SimilarityScore
 from ..models.string_pair import StringPair
-from ..services.similarity_service import SimilarityService
+from ..services.similarity import SimilarityService
 from ..utils.matrix import create_matrix
 
 
