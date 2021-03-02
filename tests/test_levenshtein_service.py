@@ -3,7 +3,7 @@ import os
 import pytest
 from app.models.similarity_score import SimilarityScore
 from app.models.string_pair import StringPair
-from app.services.levenshtein_service import LevenshteinService
+from app.services.levenshtein import LevenshteinService
 
 samples = []
 files = [os.path.join("samples", f) for f in os.listdir("samples")]
