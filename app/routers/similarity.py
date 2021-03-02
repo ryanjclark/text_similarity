@@ -2,7 +2,7 @@ from fastapi import APIRouter
 
 from ..models.similarity_score import SimilarityScore
 from ..models.string_pair import StringPair
-from ..services.levenshtein_service import LevenshteinService
+from ..services.levenshtein import LevenshteinService
 
 router = APIRouter(prefix="/api/v1", tags=["levenshtein"])
 
